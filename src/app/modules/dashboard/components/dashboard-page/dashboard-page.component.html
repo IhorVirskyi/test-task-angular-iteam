@@ -1,0 +1,9 @@
+<div *ngIf="assessments$ | async as assessments">
+  <div *ngFor="let assessment of assessments" class="inline assessment" (click)="onSelectAssessment(assessment)">
+    <span>{{assessment.id}}</span>
+    <span>{{assessment.active}}</span>
+    <span>{{assessment.name}}</span>
+    <span>{{assessment.users_resolved}}</span>
+    <img [src]="assessment.image_url" width="150" height="150" [alt]="assessment.name">
+  </div>
+</div>

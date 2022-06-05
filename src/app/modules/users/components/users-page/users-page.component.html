@@ -1,0 +1,7 @@
+<div *ngIf="users$ | async as users">
+  <div *ngFor="let user of users" class="user">
+    <span>{{user.first_name}} {{user.last_name}}</span>
+    <span>{{user.email}}</span>
+    <span>{{user.groups}}</span>
+  </div>
+</div>

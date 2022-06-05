@@ -1,0 +1,9 @@
+<form [formGroup]="loginForm" class="container">
+  <p>Log in</p>
+  <input type="text" formControlName="email">
+  <input type="password" formControlName="password">
+  <button type="submit"
+          (click)="onSubmit()"
+          [ngClass]="{'inactive': loginForm.invalid && loginForm.touched, 'loading': loading}">Login</button>
+  <span *ngIf="error">Wrong user or password</span>
+</form>

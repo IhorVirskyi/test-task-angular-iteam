@@ -1,0 +1,10 @@
+<nav class="navigation" *ngIf="user$ | async as user">
+
+  <div *ngIf="user.role === 'Admin'" class="navigation__admin">
+    <button [routerLink]="['users']">Navigate to admin section</button>
+  </div>
+
+  <button (click)="onLogOut()">Log out ({{user.last_name}})</button>
+
+</nav>
+<router-outlet></router-outlet>
